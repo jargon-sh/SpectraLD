@@ -17,6 +17,7 @@ A custom-rule linter for JSON-LD files, using the rule language of [spectral](ht
 ```bash
 git clone https://github.com/colugo/SpectraLD.git
 cd SpectraLD
+npm install
 npm run build:cli
 ```
 
