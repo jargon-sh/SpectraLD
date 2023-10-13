@@ -1,0 +1,14 @@
+{
+  "presets": [
+    ["@babel/preset-env", {
+      "targets": {
+        "node": true
+      }
+    }]
+  ],
+  "plugins": [
+    "@babel/plugin-transform-object-assign",
+    ["@babel/plugin-transform-classes", { "loose": true }],
+    ["@babel/plugin-proposal-object-rest-spread", { "useBuiltIns": true }]
+  ]
+}

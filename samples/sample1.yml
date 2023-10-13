@@ -1,0 +1,12 @@
+rules:
+
+  @context must have a version of 1.1:
+    description: @context must have a version of 1.1 
+    severity: warn 
+    given: 
+      - $.@context.*.@version
+      - $.@context.@version
+    then: 
+        function: equal 
+        functionOptions:
+          to: 1.1
