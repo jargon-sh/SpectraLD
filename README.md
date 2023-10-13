@@ -29,7 +29,7 @@ npm run build:cli
 Check the build worked with this:
 
 ```bash
-node ./spectraLD.js -i samples/sample1.json -r samples/sample1.yml
+node src/spectraLD.js -i samples/sample1.json -r samples/sample1.yml
 ```
 
 Which should output the following:
