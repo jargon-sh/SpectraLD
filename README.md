@@ -1,7 +1,7 @@
 # SpectraLD 
 
 A custom-rule linter for JSON-LD files, using the rule language of [spectral](https://github.com/stoplightio/spectral)
-**
+
 - **Custom Rulesets**: Create custom rules to lint JSON-LD **@graph** or **@context** files
 - **Ready-to-use Rulesets**: Community driven interoperability rulesets for **Verifiable Credentials**
 
@@ -56,13 +56,15 @@ SpectraLD supports a subset of spectral's [Core Functions](https://docs.stopligh
 
 ### 2. Use SpectraLD specific Core Functions
 
+
+The Core Functions from spectral are quite powerful, but SpectraLD has added a couple more to make it easier to write rules for JSON-LD
+
+
 #### equal
 
 Checks the targetted value is equal `to` or `not` the provided value
 
 
-
-NAME	DESCRIPTION	TYPE	REQUIRED?
 
 | NAME | DESCRIPTION | TYPE | REQUIRED? |
 | ---- | ----------- | ---- | --------- |
@@ -73,15 +75,15 @@ Example
 
 ```yaml
 @context must have a version of 1.1:
-description: @context must have a version of 1.1 
-severity: warn 
-given: 
-  - $.@context.*.@version
-  - $.@context.@version
-then: 
-    function: equal 
-    functionOptions:
-      to: 1.1
+    description: @context must have a version of 1.1 
+    severity: warn 
+    given: 
+      - $.@context.*.@version
+      - $.@context.@version
+    then: 
+        function: equal 
+        functionOptions:
+          to: 1.1
 
 ```
 
@@ -89,4 +91,14 @@ then:
 
 SpectraLD will run the ruleset against the input and print the results to the console.
 If there were any results with a severity of 'error', SpectraLD will return with a non-zero exit code. 
+
+
+## 👏 Contributing
+
+Thanks for your interest in SpectraLD!
+
+We'd love some support in creating better rulesets to help make JSON-LD more interoperable.
+
+Please fork this repo and send us a pull request.
+
 
